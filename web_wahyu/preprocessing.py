@@ -11,12 +11,13 @@ import torch
 import streamlit as st
 import os
 
+# Matikan AutoUpdate (opsional, agar tidak ganggu)
+os.environ['ULTRALYTICS_AUTO_UPDATE'] = '0'
+
+
 import platform, pathlib
 if platform.system() != "Windows":
     pathlib.WindowsPath = pathlib.PosixPath
-
-# Matikan AutoUpdate (opsional, agar tidak ganggu)
-os.environ['ULTRALYTICS_AUTO_UPDATE'] = '0'
 
 @st.cache_resource
 def load_yolov5_model(model_path):
@@ -73,7 +74,7 @@ def extractText(image_np):
     if image_np is None or image_np.size == 0:
         return ""
     
-    img = brightImage(pra_proses_gambar(image_np))
+    img = pra_proses_gambar(ensure_min_width(image_np))
     for config in tess_config:
         text = pytesseract.image_to_string(img, lang='ind+eng', config=config)
         score = len(text.strip())
@@ -172,7 +173,6 @@ def process_single_block(full_text):
                 break
 
     return result
-    
 
 
 # --- Deteksi Object ---
@@ -303,9 +303,3 @@ def extractData(image_list):
 
 
     
-
-
-
-
-
-
