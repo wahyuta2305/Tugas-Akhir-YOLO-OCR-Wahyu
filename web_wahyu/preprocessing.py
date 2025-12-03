@@ -39,9 +39,9 @@ def load_yolov5_model(model_path):
         return None
 
 # Load model YOLOv5
-model_resi = load_yolov5_model('.wab_wahyu/model/best_3.pt')
-model_info_penting = load_yolov5_model('.web_wahyu/model/best_4.pt')
-model_data = load_yolov5_model('.web_wahyu/model/best_5.pt')
+model_resi = load_yolov5_model('./model/best_3.pt')
+model_info_penting = load_yolov5_model('./model/best_4.pt')
+model_data = load_yolov5_model('./model/best_5.pt')
 
 
 # --- Bright Image ---
@@ -303,6 +303,7 @@ def extractData(image_list):
 
 
     
+
 
 
 
