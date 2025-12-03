@@ -11,9 +11,9 @@ import torch
 import streamlit as st
 import os
 
-import pathlib
-temp = pathlib.PosixPath
-pathlib.WindowsPath = pathlib.PosixPath
+import platform, pathlib
+if platform.system() != "Windows":
+    pathlib.WindowsPath = pathlib.PosixPath
 
 # Matikan AutoUpdate (opsional, agar tidak ganggu)
 os.environ['ULTRALYTICS_AUTO_UPDATE'] = '0'
@@ -303,4 +303,5 @@ def extractData(image_list):
 
 
     
+
 
