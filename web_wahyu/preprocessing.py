@@ -13,7 +13,7 @@ import os
 
 import pathlib
 temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+pathlib.WindowsPath = pathlib.PosixPath
 
 # Matikan AutoUpdate (opsional, agar tidak ganggu)
 os.environ['ULTRALYTICS_AUTO_UPDATE'] = '0'
@@ -303,3 +303,4 @@ def extractData(image_list):
 
 
     
+
