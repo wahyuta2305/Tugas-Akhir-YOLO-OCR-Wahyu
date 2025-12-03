@@ -1,0 +1,5 @@
+[server]
+enableCORS = false
+
+[global]
+pythonVersion = "3.11"
