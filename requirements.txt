@@ -1,6 +1,6 @@
 streamlit>=1.38.0
 numpy==1.24.3
-opencv-python-headless==4.8.0.76
+opencv-python-headless==4.10.0.84
 # PyTorch 2.1.2 CPU wheel langsung (bypass semua masalah)
 https://download.pytorch.org/whl/cpu/torch-2.1.2%2Bcpu-cp311-cp311-linux_x86_64.whl
 https://download.pytorch.org/whl/cpu/torchvision-0.16.2%2Bcpu-cp311-cp311-linux_x86_64.whl
